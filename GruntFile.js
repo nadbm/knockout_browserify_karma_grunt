@@ -9,13 +9,22 @@ module.exports=function(grunt){
                 options:{
                     transform:['babelify']
                 },
-                files: {'dist/module.js':'modules/index.js'}
+                files: {
+                    './dist/module.js':['./modules/index.js']
+                }
+            }
+        },
+        watch:{
+            scripts:{
+                files:['./modules/*.js'],
+                tasks:['browserify']
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('build',["browserify"]);
+    grunt.registerTask('default',["watch"]);
 };
 

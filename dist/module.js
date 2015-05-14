@@ -13,7 +13,7 @@ var func2 = function func2(b) {
     return b * b;
 };
 
-var var1 = 3;
+var var1 = 8;
 
 exports.func1 = func1;
 exports.func2 = func2;
@@ -24,6 +24,6 @@ exports.var1 = var1;
 
 var _import = require('./import');
 
-console.log(_import.var1);
+console.log(_import.var1 + 4);
 
 },{"./import":1}]},{},[2]);

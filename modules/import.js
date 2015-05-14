@@ -5,6 +5,6 @@ var func2=(b)=>{
     return b*b;
 };
 
-var var1 = 3 ;
+var var1 = 8 ;
 
 export {func1,func2,var1};
