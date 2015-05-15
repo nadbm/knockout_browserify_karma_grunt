@@ -4,26 +4,27 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var func1 = function func1(a) {
-    return a + 1;
+var sum = function sum(a) {
+    var b = arguments[1] === undefined ? 6 : arguments[1];
+    return a + b;
 };
 
-var func2 = function func2(b) {
+var square = function square(b) {
     "use strict";
     return b * b;
 };
 
-var var1 = 8;
+var variable = 8;
 
-exports.func1 = func1;
-exports.func2 = func2;
-exports.var1 = var1;
+exports.sum = sum;
+exports.square = square;
+exports.variable = variable;
 
 },{}],2:[function(require,module,exports){
 'use strict';
 
 var _import = require('./import');
 
-console.log(_import.var1 + 4);
+console.log(_import.variable + 4);
 
 },{"./import":1}]},{},[2]);

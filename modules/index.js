@@ -1,3 +1,3 @@
-import {func1,func2,var1} from './import';
+import {sum,square,variable} from './import';
 
-console.log(var1+4);
+console.log(variable+4);

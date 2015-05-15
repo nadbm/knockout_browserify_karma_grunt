@@ -1,10 +1,10 @@
-var func1=(a)=>(a+1);
+var sum = (a, b = 6)=>(a + b);
 
-var func2=(b)=>{
+var square = (b)=> {
     "use strict";
-    return b*b;
+    return b * b;
 };
 
-var var1 = 8 ;
+var variable = 8;
 
-export {func1,func2,var1};
+export {sum,square,variable};
