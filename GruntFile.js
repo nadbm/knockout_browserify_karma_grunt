@@ -7,7 +7,7 @@ module.exports=function(grunt){
         browserify:{
             dist:{
                 options:{
-                    transform:['babelify']
+                    transform:[['babelify',{'loose':"all"}]]
                 },
                 files: {
                     './dist/module.js':['./modules/index.js']
@@ -26,5 +26,6 @@ module.exports=function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default',["watch"]);
+    grunt.registerTask('build',["browserify"]);
 };
 
