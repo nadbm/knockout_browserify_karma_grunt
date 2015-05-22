@@ -1,3 +1,3 @@
 import {sum,square,variable} from './import';
 
-console.log(variable+4);
+console.log(square(5)); //25
