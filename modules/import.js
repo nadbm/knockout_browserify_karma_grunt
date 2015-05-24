@@ -7,4 +7,14 @@ var square = (b)=> {
 
 var variable = 8;
 
-export {sum,square,variable};
+class MyClass{
+    constructor(credentials){
+        this.name = credentials.name;
+        this.enrollmentNo = credentials.enrollmentNo
+    }
+    getName(){
+        return this.name;
+    }
+}
+
+export {sum,square,variable, MyClass};

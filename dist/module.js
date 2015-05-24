@@ -2,6 +2,9 @@
 "use strict";
 
 exports.__esModule = true;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var sum = function sum(a) {
     var b = arguments[1] === undefined ? 6 : arguments[1];
     return a + b;
@@ -14,9 +17,25 @@ var square = function square(b) {
 
 var variable = 8;
 
+var MyClass = (function () {
+    function MyClass(credentials) {
+        _classCallCheck(this, MyClass);
+
+        this.name = credentials.name;
+        this.enrollmentNo = credentials.enrollmentNo;
+    }
+
+    MyClass.prototype.getName = function getName() {
+        return this.name;
+    };
+
+    return MyClass;
+})();
+
 exports.sum = sum;
 exports.square = square;
 exports.variable = variable;
+exports.MyClass = MyClass;
 
 },{}],2:[function(require,module,exports){
 'use strict';
@@ -24,5 +43,13 @@ exports.variable = variable;
 var _import = require('./import');
 
 console.log((0, _import.square)(5)); //25
+
+var cred = {
+    name: 'Ritesh Kumar',
+    enrollmentNo: 11115078
+};
+
+var x = new _import.MyClass(cred);
+console.log(x.getName());
 
 },{"./import":1}]},{},[2]);
