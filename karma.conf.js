@@ -15,7 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'modules/import.js',
       'tests/**/*.js'
     ],
 
@@ -28,7 +27,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'modules/import.js' : [ 'browserify'],
+        'tests/**/*.js':['browserify'],
     },
 
 
@@ -41,7 +40,7 @@ module.exports = function(config) {
     // web server port
     port: 9876,
 
-
+    
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
