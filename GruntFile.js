@@ -7,13 +7,18 @@ module.exports=function(grunt){
         browserify:{
             dist:{
                 options:{
-                    transform:[['babelify',{'loose':"all"}]]
+                  // transform:[[{'loose':"all"}]]
                 },
                 files: {
                     './dist/module.js':['./modules/index.js']
                 }
             }
         },
+	karma: {
+	  unit: {
+		configFile:'karma.conf.js'
+	  }
+	},
         watch:{
             scripts:{
                 files:['./modules/*.js'],
@@ -24,8 +29,9 @@ module.exports=function(grunt){
 
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-karma');
     grunt.registerTask('default',["watch"]);
+    grunt.registerTask('test',["grunt-karma"]);
     grunt.registerTask('build',["browserify"]);
 };
 

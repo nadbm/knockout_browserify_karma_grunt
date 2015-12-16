@@ -1,20 +1,10 @@
-var sum = (a, b = 6)=>(a + b);
-
-var square = (b)=> {
-    "use strict";
-    return b * b;
+var ko = require('knockout');
+var ViewModel = function(first, last) {
+    this.firstName = ko.observable(first);
+    this.lastName = ko.observable(last);
+ 
+    this.fullName = ko.pureComputed(function() {
+        return this.firstName() + " " + this.lastName();
+    }, this);
 };
-
-var variable = 8;
-
-class MyClass{
-    constructor(credentials){
-        this.name = credentials.name;
-        this.enrollmentNo = credentials.enrollmentNo
-    }
-    getName(){
-        return this.name;
-    }
-}
-
-export {sum,square,variable, MyClass};
+module.exports = ViewModel;

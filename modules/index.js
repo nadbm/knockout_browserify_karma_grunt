@@ -1,12 +1,6 @@
-import {sum,square,variable,MyClass} from './import';
+'use strict';
+var ko = require('knockout');
+var ViewModel = require('./import');
 
-console.log(square(5)); //25
-
-var cred={
-    name:'Ritesh Kumar',
-    enrollmentNo:11115078
-}
-
-var x = new MyClass(cred);
-console.log(x.getName());
-
+// Here's my data model
+ko.applyBindings(new ViewModel("Planet", "Earth")); 
